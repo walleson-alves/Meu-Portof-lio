@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portofólio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="header"> 
+
+        <div id="logo">
+            <h1>Walleson<span class="white">Alves</span></h1>
+        </div>
+    
+        <div id="menu">
+            <a href="https://www.linkedin.com/in/wallesonalves/" target="_blank">Linkedin</a>      
+            <a href="https://www.instagram.com/walleson.alves.7545/" target="_blank">Instagran</a>
+            <a href="https://github.com/walleson-alves" target="_blank">GitHub</a>
+        </div>
+
+    </div>
+
+    <div id="content"> <!--Dentro dessa div esta todo o conteudo da pagina-->
+
+        <div id="posts"> <!--aqui estilizamos todo o conteudo dos postes -->
+
+            <!-- abertura postagem -->
+            <div class="post">
+                <h2>Breve resumo sobre mim</h2>
+                <span class="data-post">Postado 16 Outubro 2024</span>
+                <img class="img-post" src="imagens/walleson.jpg">
+                <p>Olá, sou Analista de Suporte de Sistemas, recém formado na área de tecnologia, com ampla experiência tanto em gerenciamento de risco quanto em gestão de equipes. Minha atuação envolve identificar e resolver problemas técnicos, além de garantir a continuidade e eficiência dos serviços prestados aos usuários. Ao longo da minha carreira, desenvolvi habilidades que me permitem lidar com situações críticas e oferecer soluções ágeis, sempre priorizando a satisfação do cliente e a segurança dos dados. Além do trabalho, tenho paixão por esportes, em especial o futebol, que acompanho sempre que posso. Nos momentos de lazer, gosto de tocar violão, o que me ajuda a relaxar e encontrar inspiração. A combinação entre tecnologia, gestão e essas atividades pessoais traz equilíbrio à minha vida, tanto profissional quanto pessoal.</p><br>
+                <a href="https://www.linkedin.com/in/wallesonalves/" target="_blank">Saiba mais</a><span class="black"> sobre minhas experiências.</span>
+            </div>
+            <!--fechamento postagem -->
+
+        </div>
+    
+        <div id="right-side">  <!--aqui estilizamos todo conteudo do lado direito -->
+
+            <div class="content-right">
+                <h3>Minha Formação</h3>
+
+                <div class="post-right">
+                    <p>Formado em Análise e Desenvolvimento de Sistemas</p>
+                    <a href="https://www.linkedin.com/in/wallesonalves/" target="_blank">Leia mais</a>
+                </div>
+
+                <div class="post-right" style="border-bottom: none;">
+                    <p>Técnico em Informatica</p>
+                    <a href="https://www.linkedin.com/in/wallesonalves/" target="_blank">Leia mais</a>
+                </div>
+
+                <div class="post-right" style="border-bottom: none;">
+                    <p>Português Nativo</p>
+                    <p>Inglês Básico</p>
+                    <a href="https://www.linkedin.com/in/wallesonalves/" target="_blank">Leia mais</a>
+                </div>
+
+            </div>
+
+            <div class="content-right">
+                <h3>Meus Projetos</h3>
+
+                <a href="https://www.figma.com/proto/hKFhjv6GsDiAJlBpmQulym/Wire-frame-for-appointment-booking-app-(Community)?node-id=126-24188&starting-point-node-id=126%3A24188" target="_blank">Oportunidades Perto de Min</a><br><br>
+                <a href="https://github.com/walleson-alves/Atividade-Extencionista/blob/main/Atividade%20Extencionista%20I.pdf" target="_blank">Atividade Extencionista I</a><br><br>
+                <a href="https://github.com/walleson-alves/Atividade-Extensionista-II/blob/main/Atividades%20Extensionistas%20II%20-%20Trabalho%20Final.pdf" target="_blank">Atividade Extencionista II</a><br><br>
+
+                <!--Aqui é e o codigo sobre deixe seu comentario-->
+                <label for="comentario">Deixe seu comentário:</label><br>
+                <textarea id="comentario" class="tamanho-comentario" rows="4" cols="20"></textarea><br>
+                <button onclick="adicionarComentario()">Enviar</button>
+            
+                <!-- Div para mostrar o comentário -->
+                <div id="comentarios"></div>
+
+
+                <script>
+                    function adicionarComentario() {
+                        // Pega o valor do textarea
+                        var comentario = document.getElementById("comentario").value;
+                    
+                        // Cria um novo parágrafo com o comentário
+                        var novoComentario = document.createElement("p");
+                        novoComentario.textContent = comentario;
+                    
+                        // Adiciona a classe 'tamanho-comentario' para garantir o tamanho
+                        novoComentario.classList.add('tamanho-comentario');
+                    
+                        // Adiciona o novo comentário na div "comentarios"
+                        var divComentarios = document.getElementById("comentarios");
+                        divComentarios.appendChild(novoComentario);
+                    
+                        // Limpa o textarea após adicionar o comentário
+                        document.getElementById("comentario").value = '';
+                    }
+                    </script>
+
+                
+                
+            </div>
+
+        </div>
+
+        <div id="footer">
+            Todos os direitos reservados - Walleson Alves Batista
+        </div>
+
+    </div>
+</body>
+
+</html>
